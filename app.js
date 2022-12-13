@@ -30,7 +30,7 @@ app.post("/", function(req,res){
         // res.write("adad")
         //res.send();
     
-          res.send("<h1>The temperature in <em>"+query+"</em>  is "+temp+" ° celcius<br>The weather is currently : "+description+"</h1><br><img src = "+ ImageURL+" >");
+          res.send("<h3>Have a nice day !</h3><br><h1>The temperature in <em>"+query+"</em>  is "+temp+" ° celcius<br>The weather is currently : "+description+"</h1><br><img src = "+ ImageURL+" >");
           
           //const Player = {
             // name:"Aditya",
