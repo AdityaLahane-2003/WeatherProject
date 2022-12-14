@@ -18,30 +18,32 @@
     background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed; 
-} 
-.adi{
-    position: relative;
-    animation: mymove 0.5s 1;
+}  
+   h1{
+    font-family: 'Merriweather', serif;    
 }
-
-   .top{ 
-    width: 30%;
-    margin-bottom:10px ;
-    background: none;
-    outline: none;
-    border: solid black 1px;
+.city{
+    position: relative;
+    animation: mymove 3.5s 1;
+}
+.temp{
+    position: relative;
+    animation: mymove 2.5s 1;
+}
+.desc{
     position: relative;
     animation: mymove 1.5s 1;
-   } 
-   h1{
-    font-family: 'Merriweather', serif; 
+}
+.day{
     position: relative;
-    animation: mymove 2.5s 1;   
+    animation: mymove 0.5s 1;
+    width:250px;
+    margin: auto;
 }
    img{
     margin-bottom: 10px;
     position: relative;
-    animation: mymove 3.5s 1;
+    animation: mymove 4.5s 1;
    } 
    @keyframes mymove {
   from {left: -200px;}
@@ -53,14 +55,13 @@
 <body>
     <div class="aditya">
 
-        <form method="post">
-            <img src="https://avatars.githubusercontent.com/u/108022893?v=4" alt="" width="80" height="80" style="border-radius: 100%;">
-            <h1 >Weather Project</h1>
-            <!-- <label for="cityInput">City name :</label> -->
-            <input class="btn form-control top " type="text" name="city"  placeholder="City Name" ><br>
-            <button class="btn btn-lg btn-outline-success adi" type="submit" >Get Weather Conditions</button> 
+            <img src="<%=imageURL%>" alt="" width="100" height="100" style="border-radius: 100%;">
+            <h1 class="city"><%=nameofCity%></h1>
+            <h1 class="temp"><%=temperature%> °C</h1>
+            <p class="desc">Description : <%=desc%></p>
+            <p class="day">Time Zone : <%=nameofDay%></p>
             <p class="mt-5 mb-3 text-muted">&copy; Aditya Lahane</p>
-        </form>
+        
     </div>
 </body>
 </html>
